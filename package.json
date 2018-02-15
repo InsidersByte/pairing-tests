@@ -1,0 +1,21 @@
+{
+  "name": "pairing-tests",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:InsidersByte/pairing-tests.git",
+  "author": "Jonathon Kelly <jonathon@insidersbyte.com>",
+  "license": "MIT",
+  "scripts": {
+    "precommit": "lint-staged",
+    "format": "prettier --write ./*.{js,json,md} ./**/*.{js,json,md,css}"
+  },
+  "devDependencies": {
+    "husky": "0.14.3",
+    "lint-staged": "6.1.0",
+    "prettier": "1.10.2"
+  },
+  "lint-staged": {
+    "*.{js,json,md,css}": ["prettier --write", "git add"]
+  }
+}
